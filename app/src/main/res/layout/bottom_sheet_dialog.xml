@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/imgButtonclose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        android:padding="12dp"
+        android:src="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/txt_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/txt_addInfo"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:id="@+id/img_profile1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/circleimgcorner">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_profileadd" />
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/idTVName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/img_profile1"
+            android:layout_toRightOf="@id/img_profile1"
+            android:hint="@string/txt_hint_name"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/txt_hint_color"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/idTVPhoneNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVName"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/img_profile1"
+            android:layout_toRightOf="@id/img_profile1"
+            android:hint="@string/txt_hint_pNO"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/txt_hint_color"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/idTVEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVPhoneNo"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/img_profile1"
+            android:layout_toRightOf="@id/img_profile1"
+            android:hint="@string/txt_hint_email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="@color/txt_hint_color"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/idBtnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVEmail"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/txt_add"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
